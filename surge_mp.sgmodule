@@ -1,0 +1,12 @@
+#!name=Moniepoint过人脸
+#!desc=Shu forced face detection
+#!category=Moniepoint
+
+[Map Local]
+^https:\/\/.*\.amazonaws\.com\/videos\/.*$ data-type=text data="" status-code=200
+
+[Script]
+face.js = type=http-response,pattern=^https://api.smileidentity.com/v1/upload*$,requires-body=1,max-size=0,binary-body-mode=0,timeout=90,script-path=https://raw.githubusercontent.com/iidamie/mp/main/face.js,script-update-interval=28800,argument=替换下
+
+[MITM]
+hostname = %APPEND% *.teamapt.com,*.smileidentity.com
