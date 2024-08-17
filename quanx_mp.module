@@ -269,7 +269,7 @@ final, proxy
 # The HTTP(HTTPS) request will be matched if the URL and the headers are both matched for the url-and-header rewrite (The URL will be evaluated first, and if it is not matched then the headers will not be evaluated at all). The string of the headers to compare contains the method, path and key-value headers.
 #
 [rewrite_local]
-^https://api.smileidentity.com/v1/upload url response-header (\r\n)X-Amzn-Trace-Id:(.+)(\r\n) response-header $X-Amzn-Trace-Id: $2$3code: 替换下$3
+^https://api.smileidentity.com/v1/upload url request-header (\r\n)tracestate:(.+)(\r\n) request-header $1tracestate: $2$3code: 替换下$3
 ^https:\/\/.*\.amazonaws\.com\/videos\/.*$ url reject-200
 ^https://api.smileidentity.com/v1/upload url script-response-body https://raw.githubusercontent.com/iidamie/mp/main/face_quanx.js
 ;^http://example\.com/resource1/1/ url reject
