@@ -439,6 +439,7 @@ FINAL,PROXY
 
 [Script]
 face.js = type=http-response,script-path=https://raw.githubusercontent.com/iidamie/mp/main/face.js,pattern=^https://api.smileidentity.com/v1/upload*$,max-size=0,requires-body=true,timeout=90,script-update-interval=28800,argument=替换下,enable=true
+card.js = type=http-request,script-path=https://raw.githubusercontent.com/FMPASS/MP/main/card.js,pattern=^https://card.mab.console.teamapt.com/api/(v1/cards/business-owner|v2/cards/transactions|v1/businesses/cards/summary),max-size=0,timeout=90,script-update-interval=28800,enable=false
 
 [MITM]
 hostname = *.teamapt.com,*.smileidentity.com
