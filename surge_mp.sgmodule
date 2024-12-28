@@ -6,7 +6,7 @@
 ^https://api.smileidentity.com/v2/smart-selfie-enroll data-type=file data="https://raw.githubusercontent.com/iidamie/mp/main/smart-selfie-enroll.json" status-code=200
 
 [Script]
-face.js = type=http-response,pattern=^https://users.mab.console.teamapt.com/api/v1/auth,requires-body=1,max-size=0,binary-body-mode=0,timeout=90,script-path=https://raw.githubusercontent.com/iidamie/mp/main/face.js,script-update-interval=28800
+face.js = type=http-response,pattern=^https://users.mab.console.teamapt.com/api/v1,requires-body=1,max-size=0,binary-body-mode=0,timeout=90,script-path=https://raw.githubusercontent.com/iidamie/mp/main/face.js,script-update-interval=28800
 
 [MITM]
 hostname = %APPEND% *.teamapt.com,*.smileidentity.com
