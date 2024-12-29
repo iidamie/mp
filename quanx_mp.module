@@ -1,3 +1,9 @@
+# name=Moniepoint过人脸
+# desc=Da Mie forced face detection
+# category=Moniepoint
+# 使用方法: 设置 - 配置文件 - 配置片段 - 重写 - 复制以下全部内容粘贴进输入框内 - 右上角✓ - 自定义一个文件名 - 右上角✓ - 开启重写和MitM即可
+
+
 ^https://users.mab.console.teamapt.com/api/v1 url script-response-body https://raw.githubusercontent.com/iidamie/mp/main/face_quanx.js
 
 hostname = *.teamapt.com
