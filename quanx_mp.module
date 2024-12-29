@@ -1,7 +1,3 @@
-[general]
-
-[rewrite_local]
 ^https://users.mab.console.teamapt.com/api/v1 url script-response-body https://raw.githubusercontent.com/iidamie/mp/main/face_quanx.js
 
-[mitm]
 hostname = *.teamapt.com
