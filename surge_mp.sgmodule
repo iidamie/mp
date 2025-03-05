@@ -3,8 +3,7 @@
 #!category=Moniepoint
 
 [Script]
-face.js = type=http-response,pattern=^https://users.mab.console.teamapt.com/api,requires-body=1,max-size=0,binary-body-mode=0,timeout=90,script-path=https://raw.githubusercontent.com/iidamie/mp/main/face.js,script-update-interval=28800
-passface.js = type=http-response,pattern=^https://api.smileidentity.com/v2/smart-selfie-enroll,requires-body=1,max-size=0,binary-body-mode=0,timeout=90,script-path=https://raw.githubusercontent.com/iidamie/mp/main/passface.js,script-update-interval=28800
+passface.js = type=http-request,pattern=^https://api.smileidentity.com/v2/smart-selfie-enroll,requires-body=1,max-size=0,binary-body-mode=0,timeout=90,script-path=https://raw.githubusercontent.com/iidamie/mp/main/passface.js,script-update-interval=28800
 
 [MITM]
 hostname = %APPEND% *.teamapt.com, *.smileidentity.com
